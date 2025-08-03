@@ -20,27 +20,27 @@
 <!-- Incluye la librería de Leaflet -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-	var map = L.map('map').setView([19.4326, -99.133], 13);
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  var map = L.map('map').setView([19.4326, -99.133], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '© OpenStreetMap contributors' // Muestra el crédito obligatorio
 	}).addTo(map);
-	L.marker([19.4326, -99.1332]).addTo(map)
+  L.marker([19.4326, -99.1332]).addTo(map)
  	  .bindPopup('Centro de la CDMX')
  	  .openPopup();
-	L.marker([19.3467, -99.1617]).addTo(map)
+  L.marker([19.3467, -99.1617]).addTo(map)
  	  .bindPopup('Coyoacán');
-        L.marker([19.3600, -99.2000]).addTo(map)
+  L.marker([19.3600, -99.2000]).addTo(map)
  	  .bindPopup('Álvaro Obregón');
-        L.marker([19.3719, -99.1594]).addTo(map)
+  L.marker([19.3719, -99.1594]).addTo(map)
  	  .bindPopup('Benito Juárez');
-        L.marker([19.3646, -99.2840]).addTo(map)
+  L.marker([19.3646, -99.2840]).addTo(map)
  	  .bindPopup('Cuajimalpa de Morelos ');
-        L.marker([19.4841, -99.1841]).addTo(map)
+  L.marker([19.4841, -99.1841]).addTo(map)
  	  .bindPopup('Azcapotzalco');
-        L.marker([19.3185, -99.2323]).addTo(map)
+  L.marker([19.3185, -99.2323]).addTo(map)
  	  .bindPopup('Magdalena Contreras');
 // Define la capa vacía para las alcaldías 
-  var alcaldiasLayer = L.geoJSON (null {
+var alcaldiasLayer = L.geoJSON (null {
     style: {
     color: 'Purple'
     weigth: 3, 
@@ -58,7 +58,7 @@
       .then(data => {
 	alcaldiasLayer.addData(data);
  });
-  // Agregar control de capas para  encender/apagar
+ // Agregar control de capas para  encender/apagar
   var overlayMaps = {
   "Alcaldias CDMX": alcaldiasLayer
  };
@@ -67,4 +67,5 @@ L.control.layers(null, overlayMaps).addTo(map);
 </script>
 	
 </body>
+
 </html>
