@@ -40,6 +40,7 @@
    .bindPopup('Azcapotzalco');
   L.marker([19.3185, -99.2323]).addTo(map)
    .bindPopup('Magdalena Contreras');
+	
   // Define la capa vacía para las alcaldías 
   var alcaldiasLayer = L.geoJSON (null {
     style: {
@@ -59,8 +60,8 @@
       .then(data => {
 	alcaldiasLayer.addData(data);
  });
- // Agregar control de capas para  encender/apagar
-var overlayMaps = {
+  // Agregar control de capas para  encender/apagar
+  var overlayMaps = {
   "Alcaldias CDMX": alcaldiasLayer
  };
 L.control.layers(null, overlayMaps).addTo(map);
@@ -69,6 +70,7 @@ L.control.layers(null, overlayMaps).addTo(map);
 	
 </body>
 </html>
+
 
 
 
