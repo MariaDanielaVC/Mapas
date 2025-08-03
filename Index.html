@@ -20,7 +20,7 @@
 <!-- Incluye la librería de Leaflet -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-  var map = L.map('map').setView([19.4326, -99.133], 13);
+  varmap = L.map('map').setView([19.4326, -99.133], 13);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '© OpenStreetMap contributors' // Muestra el crédito obligatorio
 	}).addTo(map);
@@ -40,14 +40,14 @@
   L.marker([19.3185, -99.2323]).addTo(map)
  	  .bindPopup('Magdalena Contreras');
 // Define la capa vacía para las alcaldías 
-var alcaldiasLayer = L.geoJSON (null {
+varalcaldiasLayer = L.geoJSON (nul {
     style: {
     color: 'Purple'
     weigth: 3, 
     fillOpacity: 0.3 
   },
   onEachFeature: funtion (feature, layer) {
-    if (feature.properties && feature.properties.NOMGEO) {
+    if(feature.properties && feature.properties.NOMGEO) {
      layer.bindPopup('Alcaldía: ' + feature.properties.NOMGEO);
     }
   }
@@ -59,13 +59,14 @@ var alcaldiasLayer = L.geoJSON (null {
 	alcaldiasLayer.addData(data);
  });
  // Agregar control de capas para  encender/apagar
-  var overlayMaps = {
+  varoverlayMaps = {
   "Alcaldias CDMX": alcaldiasLayer
  };
-L.control.layers(null, overlayMaps).addTo(map);
+L.control.layers(nul, overlayMaps).addTo(map);
 
 </script>
 	
 </body>
 
 </html>
+
