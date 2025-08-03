@@ -51,22 +51,22 @@ varalcaldiasLayer = L.geoJSON (nul {
      layer.bindPopup('Alcaldía: ' + feature.properties.NOMGEO);
     }
   }
-});
+ });
 //Cargar el archivoo GeoJSON 
     fetch('alcaldias.geojson')
       .then(response => response.json())
       .then(data => {
 	alcaldiasLayer.addData(data);
- });
+  });
  // Agregar control de capas para  encender/apagar
   varoverlayMaps = {
   "Alcaldias CDMX": alcaldiasLayer
- };
-L.control.layers(nul, overlayMaps).addTo(map);
+  };
+ L.control.layers(nul, overlayMaps).addTo(map);
 
 </script>
 	
 </body>
-
 </html>
+
 
