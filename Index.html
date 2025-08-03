@@ -41,7 +41,7 @@
   L.marker([19.3185, -99.2323]).addTo(map)
    .bindPopup('Magdalena Contreras');
   // Define la capa vacía para las alcaldías 
-  varalcaldiasLayer = L.geoJSON (nulo  {
+  var alcaldiasLayer = L.geoJSON (null {
     style: {
     color: 'Purple'
     weigth: 3, 
@@ -62,12 +62,13 @@
  // Agregar control de capas para  encender/apagar
 var overlayMaps = {
   "Alcaldias CDMX": alcaldiasLayer
-};
-L.control.layers(nul, overlayMaps).addTo(map);
+ };
+L.control.layers(null, overlayMaps).addTo(map);
 
 </script>
 	
 </body>
 </html>
+
 
 
